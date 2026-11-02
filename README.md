@@ -1,23 +1,23 @@
 # Sistema Web de Avaliação Atitudinal — protótipo acadêmico
 
-Abra `index.html` no navegador. Não há instalação, back-end ou dependências externas.
+Abra `index.html` no navegador. Não requer servidor ou instalação.
 
-## Escopo incluído
+## Funcionalidades
 
-- Professor: registro rápido, histórico e devolutivas.
-- Coordenação e núcleo pedagógico: dashboard, alertas precoces, análise por turma/aluno/dimensão, clima escolar e intervenções.
-- Estudante: evolução individual, autoavaliação, evidências e diálogo.
-- Responsável: acompanhamento individual, evidências, devolutivas e diálogo.
-- Documentos: mapa de navegação com permissões e wireframes para mobile e desktop.
+- Professor: registro em três escolhas, histórico, edição posterior de contexto e devolutiva.
+- Coordenação/núcleo: painel, filtros, gráficos de contagem derivados dos registros demonstrativos, alertas ilustrativos, clima e intervenções, acompanhamento e resposta de diálogo.
+- Estudante: evolução, autoavaliação, histórico, devolutivas recebidas, diálogo e acompanhamento da resposta.
+- Responsável: consulta ao histórico e devolutivas do estudante vinculado, diálogo e acompanhamento da resposta.
 
-## Dados de demonstração
+## Limites
 
-O enunciado **não forneceu** nomes de alunos, turmas, estatísticas, registros, alertas ou valores de gráficos. Todos os exemplos dessas categorias foram criados apenas para simular as jornadas e identificados como fictícios. O uso de uma turma 7º A não limita o público-alvo do projeto; é apenas exemplo visual.
+Todos os nomes, turmas, registros e alertas são fictícios. Os gráficos por dimensão e mês usam apenas os registros demonstrativos locais; alertas e indicadores de clima ainda são cenários ilustrativos. Sem back-end, autenticação, controle de acesso real ou segurança adequada a dados de estudantes. Os dados são salvos em `localStorage`. Não usar com dados reais.
 
-## Limitações
+## Teste sugerido
 
-A troca de perfil não é autenticação ou controle de acesso real. Os registros são salvos no `localStorage` do navegador, sem sincronização, e os indicadores e alertas visuais são cenários fixos, não cálculos derivados de dados reais. Não usar com dados reais de estudantes. O registro rápido exige três escolhas (aluno, dimensão e tipo); a terceira escolha confirma automaticamente e dispensa clique extra, podendo ser revisto em testes de usabilidade.
-
-## Estrutura
-
-`index.html` contém as telas e seus conteúdos; `style.css` reúne layout e responsividade; `script.js` contém somente navegação e interações;
+1. Professor: faça um registro em três escolhas, entre no histórico e clique em **Adicionar contexto**.
+2. Professor: envie uma devolutiva para Ana Clara.
+3. Estudante: veja a devolutiva recebida e envie uma solicitação de diálogo.
+4. Coordenação: abra **Solicitações de diálogo**, responda e altere a situação.
+5. Estudante: volte à página de diálogo e confira a resposta.
+6. Coordenação: em **Turmas e dimensões**, alterne as turmas e dimensões para ver mudanças nos registros e gráficos.
